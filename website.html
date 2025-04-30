@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="R & N.png" alt="R & N" class="couple-img">
+            <img src="NOVEMBER 2, 2025 (1).png" alt="Save the Date" class="save-the-date-img">
+            <div id="countdown">
+                <p>The countdown to our big day!</p>
+                <div id="timer"></div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="JVKE - her (official lyric video) (1).mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+     <!-- Audio Player Section -->
+  <div class="audio-player">
+    <!-- Play Button -->
+    <div class="controls">
+      <button id="play-btn" class="play-btn">&#9654;</button> <!-- Play Icon -->
+    </div>
+
+    <!-- Time & Progress Bar -->
+    <div class="progress-container">
+      <span id="current-time">0:00</span>
+      <input type="range" id="progress-bar" value="0" max="100" step="1" onchange="changeProgress()">
+      <span id="total-time">3:34</span>
+    </div>
+
+    <!-- Volume Control -->
+    <div class="volume-control">
+      <span id="volume-icon">&#128266;</span> <!-- Volume Icon -->
+      <input type="range" id="volume-bar" value="100" max="100" onchange="changeVolume()">
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="bg-music" preload="auto" loop>
+    <source src="your-audio-file.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <section id="welcome-message">
+    <div class="message-content">
+        <h2>WELCOME TO OUR WEDDING WEBSITE</h2>
+        <p>Dear lovely families and friends,</p>
+        <p>We look forward to sharing our special day with you!</p>
+        <p>We have limited our invites to the closest to us considering the venues’ limited capacity.</p>
+        <p>Please fill out the RSVP form, and kindly respond on or before September 2025.</p>
+        <p>Our website will be where you can find all things wedding-related. We hope you enjoy it as much as we enjoyed making it!</p>
+        <p>Love,</p>
+        <p>Nics & Racel</p>
+    </div>
+</section>
+
+<!-- Wedding Invitation Image Section -->
+<section id="invitation-image">
+  <img src="1.png" alt="Wedding Invitation" style="width: 100%; max-width: 1000px; margin: 40px auto; display: block;">
+  <img src="2.png" alt="Wedding Invitation Details" style="width: 100%; max-width: 1000px; margin: 40px auto; display: block;">
+</section>
+
+
+<!-- Image Carousel Section -->
+<section id="image-carousel">
+  <div class="carousel-container">
+      <img src="image1.jpg" alt="Image 1" class="carousel-image" />
+      <img src="image2.jpg" alt="Image 2" class="carousel-image" />
+  </div>
+</section>
+
+<!-- Dress Code Section -->
+<section id="dress-code">
+  <h2>THE DRESS CODE</h2>
+  <div class="dress-code-content">
+      <div class="dress-code-group">
+          <h3>PRINCIPAL SPONSORS: FORMAL ATTIRE</h3>
+          <div class="dress-images">
+              <img src="principal.png" alt="Principal Sponsors Attire" class="dress-image">
+          </div>
+          <p><strong>Ninong:</strong> Barong and Black Pants</p>
+          <p><strong>Ninang:</strong> Long Gown</p>
+      </div>
+
+      <div class="dress-code-group">
+          <h3>GUESTS: SEMI – FORMAL ATTIRE</h3>
+          <div class="dress-images">
+              <img src="guests.png" alt="Guests Attire" class="dress-image">
+          </div>
+          <p><strong>Ladies:</strong> Long Gown / Dress</p>
+          <p><strong>Gents:</strong> Suits / Long sleeves and Trouser pants</p>
+      </div>
+
+      <div class="dress-code-group">
+          <h3>COLOR PALETTE</h3>
+          <p>You may glam up in these shades, but your smile is the best you can wear!</p>
+          <div class="color-pallete">
+            <img src="color pallete.png" alt="color-pallete" class="color-pallete">
+        </div>
+      </div>
+
+      <div class="dress-code-group">
+          <p>We kindly request that all guests honor the dress code by avoiding overly casual attire such as polo shirts, t-shirts, denim jeans, and slippers.</p>
+          <p>We look forward to seeing you in your finest that compliments our chosen theme!</p>
+      </div>
+  </div>
+</section>
+
+<!-- Gift Guide Section -->
+<section id="gift-guide">
+  <h2>GIFT GUIDE</h2>
+  <p>With all the blessings that God poured out on us, we cannot ask for more. Your presence and prayers are all we request. But should you still believe that a gift is worth giving, monetary gifts for our future would be much appreciated.</p>
+  <div class="qr-code">
+      <img src="qr_code.jpg" alt="GCash QR Code" style="max-width: 300px; margin-top: 20px;">
+  </div>
+</section>
+
+<!-- The Venue Section -->
+<section id="the-venue">
+  <h2>The Venue</h2>
+  <div class="venue-container">
+      <!-- Venue 1 -->
+      <div class="venue">
+          <div class="venue-background" id="venue1-background">
+              <a href="#map1" class="view-map-btn">View Map</a>
+          </div>
+      </div>
+
+      <!-- Venue 2 -->
+      <div class="venue">
+          <div class="venue-background" id="venue2-background">
+              <a href="#map2" class="view-map-btn">View Map</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Image Carousel Section -->
+<section id="image-carousel">
+  <div class="carousel-container">
+      <img src="image1.jpg" alt="Image 1" class="carousel-image" />
+      <img src="image2.jpg" alt="Image 2" class="carousel-image" />
+  </div>
+</section>
+
+<section id="qna">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="qna-item">
+      <button class="qna-question">RSVP</button>
+      <div class="qna-answer">
+          <p>As much as we would love to accommodate all our friends and family, we have a limited number of guests. Please understand that this event is strictly by invitation only. Guests not found on the guest list provided will not be allowed to enter. The favor of a reply is required on or before September 2025. This event is strictly by invitation only. Please respond before September 2025.</p>
+      </div>
+  </div>
+
+  <div class="qna-item">
+      <button class="qna-question">Is there parking space available for my car?</button>
+      <div class="qna-answer">
+          <p>Yes, there is parking available for everyone at the venue. However, please take note that it is first come, first served, so please arrive early.</p>
+      </div>
+  </div>
+
+  <div class="qna-item">
+      <button class="qna-question">I said "NO" to the RSVP but I had a change of plans—I can attend now! What should I do?</button>
+      <div class="qna-answer">
+          <ul>
+              <li>Please check with us first. Unfortunately, we have a strict guest list.</li>
+              <li>Kindly inform us if your schedule clears up, so we can try to accommodate you.</li>
+              <li>If seats become available, we will let you know as soon as possible.</li>
+              <li>Please do not attend unannounced, as we may not have any available seats for you.</li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="qna-item">
+      <button class="qna-question">When is the appropriate time to leave?</button>
+      <div class="qna-answer">
+          <p>This event took us months to plan, and we want to celebrate it with the people that are very dear to our hearts. We want you to have fun! Celebrate with us until the end of the program!</p>
+      </div>
+  </div>
+
+  <div class="qna-item">
+      <button class="qna-question">How can I help the couple have a great time during their wedding?</button>
+      <div class="qna-answer">
+          <ul>
+              <li>Pray with us for favorable weather and the continuous blessings of our Lord as we enter this new chapter of our lives as husband and wife.</li>
+              <li>RSVP as soon as your schedule is cleared.</li>
+              <li>Dress appropriately and follow our wedding motif.</li>
+              <li>Be on time.</li>
+              <li>Follow the seating arrangement in the reception.</li>
+              <li>Stay until the end of the program.</li>
+              <li>Join the activities and enjoy!</li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="qna-item">
+      <button class="qna-question">May I invite a "PLUS ONE" to the event?</button>
+      <div class="qna-answer">
+          <p>As much as we would love to accommodate all our friends and family, we have a limited number of guests. Please understand that this event is strictly by invitation only. Kindly check our invitation to know the number of seats allotted for you. Guests not found on the guest list provided will not be allowed to enter.</p>
+      </div>
+  </div>
+
+  <div class="qna-item">
+      <button class="qna-question">What if I RSVP'd but cannot attend?</button>
+      <div class="qna-answer">
+          <p>We would love to have you at our wedding, but we understand that there are circumstances beyond our control. However, please let us know as soon as possible so we can reallocate your seat(s).</p>
+      </div>
+  </div>
+
+  <div class="qna-item">
+      <button class="qna-question">Can I sit anywhere at the reception?</button>
+      <div class="qna-answer">
+          <p>Please don't. It took us a lot of effort and discussion to finish the seating arrangement, which is planned for everyone's convenience and preference, but there is no need to worry! You'll surely be seated with your friends or people that you have the same interest with.</p>
+          <p>Our coordinators will gladly assist you in finding your designated seat after registration. Feel free to ask them for assistance and they will gladly help you.</p>
+      </div>
+  </div>
+
+  <div class="qna-item">
+      <button class="qna-question">Am I allowed to take pictures and/or videos during the ceremony?</button>
+      <div class="qna-answer">
+          <p>We request everyone to keep the ceremony camera-free. While our I Do’s are unplugged, our reception is not and definitely as a couple who loves pictures, you’ll get tons of options to take your pictures. Feel free to take your shots and tag us along using our official wedding hashtag.</p>
+      </div>
+  </div>
+
+  <div class="qna-item">
+      <button class="qna-question">Can we bring our kids to the wedding?</button>
+      <div class="qna-answer">
+          <p>This is a strict adult-only event. As much as we love your kids, the only kids invited to our wedding are those in the entourage. We hope you understand and still come and join us in our special day.</p>
+      </div>
+  </div>
+</section>
+
+ <!-- Button below Q&A Section -->
+ <!-- View Pre-Wedding Gallery Button Container -->
+<div class="view-gallery-container">
+  <a href="#gallery">
+      <button class="view-gallery-btn">View Pre-Wedding Gallery</button>
+  </a>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  
+
+    <!-- RSVP Section -->
+    <section id="rsvp">
+        <h2>RSVP</h2>
+        <p>Please let us know if you can attend our special day! Kindly fill out the form below to RSVP.</p>
+        
+        <!-- Google Form Embed -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDkYh9hQaFHr8H8hZV5fNsXMwIzyz6fZP0bLf8pOKr6bsx5w/viewform?embedded=true" width="640" height="710" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+    <script src="script.js"></script>
+</body>
+</html>

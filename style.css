@@ -1,0 +1,921 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #967969; /* Mocha */
+}
+
+/* Header */
+header {
+  background-color: #E2725B; /* Terracotta */
+  padding: 10px 20px;
+  text-align: center;
+  position: relative;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('project1.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px; /* Adds some space around content */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Logo Image (Couple's image) */
+.hero-content .couple-img {
+  max-width: 200px; /* Adjust size of the logo */
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Save the Date Image */
+.hero-content .save-the-date-img {
+  max-width: 400px; /* Adjust the size to fit */
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+
+}
+
+/* Burger Menu Icon */
+.burger-menu {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('project1.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+/* Logo Image */
+.hero-content .couple-img {
+  max-width: 500px; /* Adjust size of the logo */
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Save the Date Image */
+.hero-content .save-the-date-img {
+  max-width: 400px; /* Adjust the size to fit */
+  margin-top: 20px;
+}
+
+/* Countdown Timer */
+#countdown {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #C45508; /* Rust Orange */
+  font-family: 'Georgia', serif;
+}
+
+#timer {
+  font-size: 36px;
+  font-weight: bold;
+  color: #967969; /* Terracotta */
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      display: none; /* Hide menu by default on small screens */
+      text-align: center;
+      width: 100%;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  /* Show burger icon on small screens */
+  .burger-menu {
+      display: block;
+  }
+
+  /* When burger menu is active, show navigation */
+  nav ul.active {
+      display: flex;
+  }
+
+  .hero-content .couple-img {
+      max-width: 150px; /* Adjust size for smaller screens */
+  }
+
+  .hero-content .save-the-date-img {
+      max-width: 300px; /* Adjust size for smaller screens */
+  }
+}
+
+/* Text Shadow for Headings */
+.hero-content h1, .hero-content .date {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+#countdown {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #ffffff; /* Rust Orange */
+  font-family: 'Georgia', serif;
+}
+
+#timer {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff; /* Terracotta */
+  display: flex;
+  gap: 10px; /* Space between time units */
+  justify-content: center;
+  align-items: center;
+}
+
+.time-box {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #ffffff; /* Soft terracotta background */
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      display: none; /* Hide menu by default on small screens */
+      text-align: center;
+      width: 100%;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  /* Show burger icon on small screens */
+  .burger-menu {
+      display: block;
+  }
+
+  /* When burger menu is active, show navigation */
+  nav ul.active {
+      display: flex;
+  }
+
+  .hero-content .couple-img {
+      max-width: 150px; /* Adjust size for smaller screens */
+  }
+
+  .hero-content .save-the-date-img {
+      max-width: 300px; /* Adjust size for smaller screens */
+  }
+}
+
+/* Text Shadow for Headings */
+.hero-content h1, .hero-content .date {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Styling for Audio Player */
+.audio-player {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #f8f8f8; /* Light background for the audio player */
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.play-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #E2725B; /* Soft terracotta for play button */
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff; /* White icon */
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #ddd; /* Light gray progress bar */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#progress-bar::-webkit-slider-thumb {
+  width: 10px;
+  height: 10px;
+  background-color: #E2725B; /* Soft terracotta slider thumb */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#current-time,
+#total-time {
+  font-size: 14px;
+  color: #967969; /* Darker terracotta for time text */
+  margin: 0 5px;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#volume-bar {
+  width: 100px;
+  cursor: pointer;
+}
+
+#volume-icon {
+  font-size: 20px;
+  color: #967969; /* Darker terracotta for volume icon */
+}
+
+
+#welcome-message {
+  padding: 40px;
+  background-color: #E2725B; /* Soft terracotta background */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+}
+
+#welcome-message h2 {
+  font-size: 2rem;
+  color: #fff; /* White text */
+  margin-bottom: 20px;
+}
+
+#welcome-message p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Slideshow Section */
+#photo-slideshow {
+  margin-top: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust based on image size */
+  overflow: hidden;
+}
+
+.slideshow-image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slideshow-image.active {
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #E2725B;
+  color: #fff;
+}
+/* Dress Code Section */
+#dress-code {
+  padding: 40px;
+  background-color: #f8f8f8;
+  color: #5A3D35; /* Mocha */
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.dress-code-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.dress-code-group {
+  margin-bottom: 40px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.dress-code-group h3 {
+  font-size: 1.5rem;
+  color: #E2725B; /* Terracotta */
+  margin-bottom: 10px;
+}
+
+.dress-code-group p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.dress-images {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.dress-image {
+  max-width: 300px;
+  width: 100%;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+
+.color-pallete { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  max-width: 800px;
+  width: 60%;
+  text-align: center;
+  margin-left: auto;  /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+} 
+
+/* Gift Guide Section */
+#gift-guide {
+  padding: 40px;
+  background-color: #f8f8f8; /* Light background */
+  color: #5A3D35; /* Mocha */
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#gift-guide h2 {
+  font-size: 2rem;
+  color: #E2725B; /* Terracotta */
+  margin-bottom: 20px;
+}
+
+#gift-guide p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code img {
+  max-width: 300px; /* Adjust image size */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Q&A Section */
+#qna {
+  padding: 40px;
+  background-color: #f8f8f8; /* Light background */
+  text-align: center;
+  color: #5A3D35; /* Mocha */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.qna-item {
+  margin-bottom: 20px;
+}
+
+.qna-question {
+  background-color: #E2725B; /* Terracotta background */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.qna-question:hover {
+  background-color: #D98A2A; /* Change color on hover */
+}
+
+.qna-answer {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  display: none; /* Hide answers initially */
+  border-radius: 8px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.qna-answer ul {
+  padding-left: 20px;
+}
+
+.qna-answer li {
+  margin-bottom: 10px;
+}
+
+
+/* Button below Q&A */
+.gallery-button {
+  background-color: #E2725B; /* Terracotta */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.gallery-button:hover {
+  background-color: #D98A2A; /* Darker terracotta on hover */
+}
+
+/* Button below Q&A */
+.gallery-button {
+  background-color: #E2725B;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.gallery-button:hover {
+  background-color: #D98A2A;
+}
+
+
+/* Button below Q&A */
+.gallery-button {
+  background-color: #E2725B; /* Terracotta */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.gallery-button:hover {
+  background-color: #D98A2A; /* Darker terracotta on hover */
+}
+
+/* Q&A Section */
+#qna {
+  padding: 40px;
+  background-color: #f8f8f8; /* Light background */
+  text-align: center;
+  color: #5A3D35; /* Mocha */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.qna-item {
+  margin-bottom: 20px;
+}
+
+.qna-question {
+  background-color: #E2725B; /* Terracotta background */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.qna-question:hover {
+  background-color: #D98A2A; /* Change color on hover */
+}
+
+.qna-answer {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  display: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.qna-answer ul {
+  padding-left: 20px;
+}
+
+.qna-answer li {
+  margin-bottom: 10px;
+}
+
+/* View Pre-Wedding Gallery Button Container */
+.view-gallery-container {
+  background-image: url('button-background.jpg'); /* Replace with your background image */
+  background-size: cover;  /* Ensure the image covers the entire container */
+  background-position: center;  /* Center the image */
+  padding: 60px 0; /* Increase padding to make the container larger */
+  display: flex;
+  justify-content: center;  /* Center the button horizontally */
+  align-items: center;  /* Center the button vertically */
+  border-radius: 8px;  /* Optional: Rounded corners for the container */
+  height: 300px;  /* Set a fixed height for the container */
+  width: 100%;  /* Full width */
+}
+
+/* Button inside the container */
+.view-gallery-btn {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background to make text stand out */
+  color: white; /* Text color */
+  padding: 25px 60px; /* Increase button padding to make the button larger */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners for the button */
+  font-size: 2rem; /* Larger font size for the button text */
+  font-weight: bold; /* Make text bold */
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Button Hover Effect */
+.view-gallery-btn:hover {
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Button Focus (optional, for accessibility) */
+.view-gallery-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow when focused */
+}
+
+#pre-wedding-gallery h2 {
+  font-size: 2rem;
+  color: #E2725B; /* Terracotta */
+  margin-bottom: 30px;
+}
+
+/* Gallery Container */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 15px; /* Space between the images */
+  padding: 0 20px;
+}
+
+.gallery-image {
+  width: 100%; /* Make the images responsive */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover; /* Ensure images fill the space without distorting */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.gallery-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* RSVP Section */
+#rsvp {
+  padding: 40px;
+  background-color: #f8f8f8; /* Light background */
+  text-align: center;
+  color: #5A3D35; /* Mocha */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#rsvp h2 {
+  font-size: 2rem;
+  color: #E2725B; /* Terracotta */
+  margin-bottom: 20px;
+}
+
+#rsvp p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Google Form Embed */
+iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Big Picture Section */
+#big-picture {
+  text-align: center; /* Center the image */
+  margin: 40px 0; /* Add spacing around the image */
+}
+
+.big-image {
+  width: 100%; /* Make image responsive to the container's width */
+  max-width: 1200px; /* Set a max-width to prevent the image from being too large */
+  height: auto; /* Keep the aspect ratio */
+  border-radius: 8px; /* Optional: Adds rounded corners to the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a soft shadow around the image */
+}
+
+/* View Pre-Wedding Gallery Button Container */
+.view-gallery-container {
+  background-image: url('button-background.jpg'); /* Replace with your background image */
+  background-size: cover;  /* Ensure the image covers the entire container */
+  background-position: center;  /* Center the image */
+  padding: 60px 0; /* Increase padding to make the container larger */
+  display: flex;
+  justify-content: center;  /* Center the button horizontally */
+  align-items: center;  /* Center the button vertically */
+  border-radius: 8px;  /* Optional: Rounded corners for the container */
+  height: 300px;  /* Set a fixed height for the container */
+  width: 100%;  /* Full width */
+}
+
+/* Button inside the container */
+.view-gallery-btn {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background to make text stand out */
+  color: white; /* Text color */
+  padding: 25px 60px; /* Increase button padding to make the button larger */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners for the button */
+  font-size: 2rem; /* Larger font size for the button text */
+  font-weight: bold; /* Make text bold */
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Button Hover Effect */
+.view-gallery-btn:hover {
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Button Focus (optional, for accessibility) */
+.view-gallery-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow when focused */
+}
+
+/* Image Carousel Section */
+#image-carousel {
+  margin-top: 50px; /* Adjust the top margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Fixed height for the carousel */
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide overflow to ensure only one image is visible */
+  background-color: #f5f5f5; /* Optional: Set a light background for the section */
+  border-radius: 10px; /* Optional: Rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
+}
+
+/* Carousel Image Container */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Each Image in the Carousel */
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the container without distortion */
+  opacity: 0; /* Initially hide images */
+  transition: opacity 1.5s ease-in-out; /* Smooth fade transition */
+}
+
+/* Active Image */
+.carousel-image.active {
+  opacity: 1; /* Only the active image will be visible */
+}
+
+/* Optional: Style for carousel images' borders */
+.carousel-image {
+  border-radius: 10px;
+}
+
+/* The Venue Section */
+#the-venue {
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Light background */
+  text-align: center;
+}
+
+#the-venue h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #4E3B31; /* Mocha color */
+}
+
+/* Container for the two venues */
+.venue-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Each venue section */
+.venue {
+  width: 45%; /* Each venue takes 45% of the width */
+  height: 300px; /* Set a fixed height for the venue block */
+  position: relative;
+  border-radius: 10px; /* Rounded corners for the venue */
+  overflow: hidden;
+}
+
+/* Background image for the venue */
+.venue-background {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white; /* Text color on the background */
+  padding: 20px;
+  text-align: center;
+}
+
+.venue-background h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  z-index: 2;
+}
+
+/* The View Map Button */
+.view-map-btn {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+.view-map-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darken on hover */
+}
+
+/* Example background images for the venues */
+#venue1-background {
+  background-image: url('venue1.jpg'); /* Replace with your image */
+}
+
+#venue2-background {
+  background-image: url('venue2.jpg'); /* Replace with your image */
+}
