@@ -42,27 +42,25 @@ nav ul li a {
 }
 
 /* Hero Section */
-.hero {
-  background-image: url('project1.jpg'); /* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  padding: 20px; /* Adds some space around content */
+.hero-content {
+  position: relative;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.hero-content .couple-img {
+  position: absolute;
+  top: -80px;          /* move higher (closer to PRIVATE INVITATION) */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px;    /* make the image bigger */
+  width: 100%;         /* scale responsively */
+  z-index: 2;          /* keep it on top */
 }
+
+.hero-content .save-the-date-img,
+.hero-content #countdown {
+  margin-top: 280px;   /* push content further down to avoid overlap */
+}
+
 
 /* Logo Image (Couple's image) */
 .hero-content .couple-img {
@@ -73,7 +71,7 @@ nav ul li a {
 
 /* Save the Date Image */
 .hero-content .save-the-date-img {
-  max-width: 400px; /* Adjust the size to fit */
+  max-width: 200px; /* Adjust the size to fit */
   margin-top: 20px;
   animation: fadeIn 1s ease-in-out;
 
@@ -119,17 +117,22 @@ nav ul li a {
 
 /* Countdown Timer */
 #countdown {
-  margin-top: 20px;
-  font-size: 24px;
-  color: #C45508; /* Rust Orange */
-  font-family: 'Georgia', serif;
+  margin-top: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
 }
 
 #timer {
-  font-size: 36px;
-  font-weight: bold;
-  color: #967969; /* Terracotta */
+  font-size: 42px;           
+  font-weight: 900;
+  color: #ffffff;            
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.8); /* 👈 strong shadow */
+  letter-spacing: 2px;
+  margin-top: 10px;
 }
+
 
 /* Media Queries for Small Screens */
 @media (max-width: 768px) {
@@ -919,3 +922,53 @@ iframe {
 #venue2-background {
   background-image: url('venue2.jpg'); /* Replace with your image */
 }
+/* The Finisher Background Animation */
+.finisher-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Background behind content */
+}
+#private-invitation {
+  background-color: #E2725B; /* Terracotta background */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+}
+
+/* RSVP Section */
+#rsvp {
+  padding: 60px 20px;
+  background-color: #f8f8f8; /* Light background */
+  text-align: center;
+  color: #5A3D35; /* Mocha */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#rsvp h2 {
+  font-size: 2.2rem;
+  color: #E2725B; /* Terracotta */
+  margin-bottom: 15px;
+}
+
+#rsvp p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+#rsvp iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 650px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+

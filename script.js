@@ -77,34 +77,8 @@ volumeBar.addEventListener('input', () => {
   audio.volume = volumeBar.value / 100;
 });
 
-// Wait until the DOM is fully loaded before adding event listeners
-document.addEventListener("DOMContentLoaded", function() {
-  let image1 = document.getElementById('image1');
-  let image2 = document.getElementById('image2');
 
-  // Set initial opacity for images
-  image1.style.opacity = 1;
-  image2.style.opacity = 0;
 
-  // Add scroll event listener
-  window.addEventListener('scroll', function() {
-    let scrollPosition = window.scrollY; // Get current scroll position
-    let windowHeight = window.innerHeight; // Height of the viewport
-
-    // Check if scroll is past half of the window height
-    if (scrollPosition > windowHeight / 2) {
-      // When user scrolls down, show second image and hide the first one
-      image1.style.opacity = 0;
-      image2.style.opacity = 1;
-    } else {
-      // When user scrolls back up, show first image and hide the second one
-      image1.style.opacity = 1;
-      image2.style.opacity = 0;
-    }
-  });
-});
-
-let currentIndex = 0;
 const images = document.querySelectorAll('.slider-image');
 const totalImages = images.length;
 
@@ -159,7 +133,7 @@ window.onload = function() {
   }
 
   // Change the image every 4seconds
-  setInterval(changeImage, 4000);
+  setInterval(changeImage, 2000);
 
   // Initialize the slideshow by showing the first image
   changeImage();

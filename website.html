@@ -7,22 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="private-invitation">
+  <p>This is a <strong>PRIVATE INVITATION</strong>, please <strong>DO NOT SHARE</strong> the website with anyone.</p>
+</div>
 
-
+    <div class="finisher-background"></div> <!-- This div will be the animated background -->
+    
     <section class="hero">
-        <div class="hero-content">
-            <img src="R & N.png" alt="R & N" class="couple-img">
-            <img src="NOVEMBER 2, 2025 (1).png" alt="Save the Date" class="save-the-date-img">
-            <div id="countdown">
-                <p>The countdown to our big day!</p>
-                <div id="timer"></div>
-            </div>
-        </div>
-    </section>
+  <div class="hero-content">
+      <img src="Picture1.png" alt="R & N" class="couple-img">
+      <img src="NOVEMBER 2, 2025 (1).png" alt="Save the Date" class="save-the-date-img">
+
+     
+
+      <div id="countdown">
+          <p>The countdown to our big day!</p>
+          <div id="timer"></div>
+      </div>
+  </div>
+</section>
+
 
        <!-- Background Music -->
     <audio id="bg-music" loop>
-        <source src="JVKE - her (official lyric video) (1).mp3" type="audio/mp3">
+        <source src="I Choose You {The Wedding Song} __ Ryann Darling Original __ On iTunes & Spotify [fXN-m49MHO0].mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
@@ -59,7 +67,7 @@
         <p>Dear lovely families and friends,</p>
         <p>We look forward to sharing our special day with you!</p>
         <p>We have limited our invites to the closest to us considering the venues’ limited capacity.</p>
-        <p>Please fill out the RSVP form, and kindly respond on or before September 2025.</p>
+        <p>Please fill out the RSVP form, and kindly respond on or before September 29, 2025.</p>
         <p>Our website will be where you can find all things wedding-related. We hope you enjoy it as much as we enjoyed making it!</p>
         <p>Love,</p>
         <p>Nics & Racel</p>
@@ -97,7 +105,7 @@
       <div class="dress-code-group">
           <h3>GUESTS: SEMI – FORMAL ATTIRE</h3>
           <div class="dress-images">
-              <img src="guests.png" alt="Guests Attire" class="dress-image">
+              <img src="guest.jpg" alt="Guests Attire" class="dress-image">
           </div>
           <p><strong>Ladies:</strong> Long Gown / Dress</p>
           <p><strong>Gents:</strong> Suits / Long sleeves and Trouser pants</p>
@@ -123,29 +131,45 @@
   <h2>GIFT GUIDE</h2>
   <p>With all the blessings that God poured out on us, we cannot ask for more. Your presence and prayers are all we request. But should you still believe that a gift is worth giving, monetary gifts for our future would be much appreciated.</p>
   <div class="qr-code">
-      <img src="qr_code.jpg" alt="GCash QR Code" style="max-width: 300px; margin-top: 20px;">
+      <img src="qr_code.png" alt="GCash QR Code" style="max-width: 300px; margin-top: 20px;">
   </div>
 </section>
 
-<!-- The Venue Section -->
-<section id="the-venue">
-  <h2>The Venue</h2>
-  <div class="venue-container">
-      <!-- Venue 1 -->
-      <div class="venue">
-          <div class="venue-background" id="venue1-background">
-              <a href="#map1" class="view-map-btn">View Map</a>
-          </div>
-      </div>
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...etc" 
+  width="100%" 
+  height="300" 
+  style="border:0;" 
+  allowfullscreen 
+  loading="lazy">
+</iframe>
 
-      <!-- Venue 2 -->
-      <div class="venue">
-          <div class="venue-background" id="venue2-background">
-              <a href="#map2" class="view-map-btn">View Map</a>
-          </div>
-      </div>
+<div class="venue">
+  <div class="venue-background" id="venue1-background">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=YOUR-VENUE-LINK" 
+        width="100%" 
+        height="300" 
+        style="border:0; border-radius:10px;" 
+        allowfullscreen 
+        loading="lazy">
+      </iframe>
   </div>
-</section>
+</div>
+
+<div class="venue">
+  <div class="venue-background" id="venue2-background">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=YOUR-SECOND-VENUE-LINK" 
+        width="100%" 
+        height="300" 
+        style="border:0; border-radius:10px;" 
+        allowfullscreen 
+        loading="lazy">
+      </iframe>
+  </div>
+</div>
+
 
 <!-- Image Carousel Section -->
 <section id="image-carousel">
@@ -161,7 +185,10 @@
   <div class="qna-item">
       <button class="qna-question">RSVP</button>
       <div class="qna-answer">
-          <p>As much as we would love to accommodate all our friends and family, we have a limited number of guests. Please understand that this event is strictly by invitation only. Guests not found on the guest list provided will not be allowed to enter. The favor of a reply is required on or before September 2025. This event is strictly by invitation only. Please respond before September 2025.</p>
+          <p>As much as we would love to accommodate all our friends and family, we have a limited number of guests. 
+Please understand that this event is strictly by invitation only. We have reserved seat(s) for you and would be delighted to receive your response on or before <strong>September 29, 2025.</strong> 
+
+Kindly note that if we don’t hear from you by then, we will assume you are unable to attend. Thank you!</p>
       </div>
   </div>
 
@@ -246,7 +273,7 @@
  <!-- Button below Q&A Section -->
  <!-- View Pre-Wedding Gallery Button Container -->
 <div class="view-gallery-container">
-  <a href="#gallery">
+  <a href="gallery.html">
       <button class="view-gallery-btn">View Pre-Wedding Gallery</button>
   </a>
 </div>
@@ -263,19 +290,52 @@
 
   
 
-    <!-- RSVP Section -->
-    <section id="rsvp">
-        <h2>RSVP</h2>
-        <p>Please let us know if you can attend our special day! Kindly fill out the form below to RSVP.</p>
-        
-        <!-- Google Form Embed -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDkYh9hQaFHr8H8hZV5fNsXMwIzyz6fZP0bLf8pOKr6bsx5w/viewform?embedded=true" width="640" height="710" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-    </section>
+<section id="rsvp">
+  <h2>✨ RSVP for Our Wedding</h2>
+  <p>Please confirm your attendance using the form below.</p>
+  <iframe
+    src="https://form.jotform.com/252641365352051"
+    allowfullscreen>
+  </iframe>
+</section>
 
-    <script src="script.js"></script>
-</body>
-</html>
 
-    <script src="script.js"></script>
 </body>
-</html>
+</html>   <!-- Initialize Finisher Header with your unique configuration -->
+<script type="text/javascript">
+new FinisherHeader({
+  "count": 100, // Number of particles
+  "size": {
+    "min": 2, // Minimum size of particles
+    "max": 8, // Maximum size of particles
+    "pulse": 0 // Disable pulse effect
+  },
+  "speed": {
+    "x": {
+      "min": 0,
+      "max": 0.4 // Horizontal speed range
+    },
+    "y": {
+      "min": 0,
+      "max": 0.6 // Vertical speed range
+    }
+  },
+  "colors": {
+    "background": "#e2725b", // Background color
+    "particles": [
+      "#fbfcca", // Particle color 1
+      "#d7f3fe", // Particle color 2
+      "#ffd0a7"  // Particle color 3
+    ]
+  },
+  "blending": "overlay", // Blending mode
+  "opacity": {
+    "center": 1, // Full opacity at the center
+    "edge": 0 // Transparent at the edges
+  },
+  "skew": -2, // Skew angle of particles
+  "shapes": [
+    "c" // Shape of particles (circle)
+  ]
+});
+</script>
