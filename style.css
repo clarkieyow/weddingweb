@@ -972,3 +972,31 @@ iframe {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 500px; /* adjust to your image size */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
+}
+
+/* Keep ALL images stacked, but only the active one is visible */
+.carousel-image.active {
+  opacity: 1;
+  z-index: 2;
+}
+

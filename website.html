@@ -24,6 +24,37 @@
           <p>The countdown to our big day!</p>
           <div id="timer"></div>
       </div>
+
+<script>
+  // Set your wedding date here
+  const weddingDate = new Date("November 2, 2025 14:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance < 0) {
+      document.getElementById("timer").innerHTML = "🎉 The big day has arrived!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown(); // run once on load
+</script>
+
+
+</script>
+
+
   </div>
 </section>
 
@@ -57,9 +88,55 @@
 
   <!-- Audio Element -->
   <audio id="bg-music" preload="auto" loop>
-    <source src="your-audio-file.mp3" type="audio/mp3">
+    <source src="I Choose You {The Wedding Song} __ Ryann Darling Original __ On iTunes & Spotify [fXN-m49MHO0].mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
+
+  <script>
+  const audio = document.getElementById("bg-music");
+  const playBtn = document.getElementById("play-btn");
+  const progressBar = document.getElementById("progress-bar");
+  const currentTimeEl = document.getElementById("current-time");
+  const totalTimeEl = document.getElementById("total-time");
+  const volumeBar = document.getElementById("volume-bar");
+
+  // Toggle play/pause
+  playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play().then(() => {
+        playBtn.innerHTML = "&#10074;&#10074;"; // pause icon
+      }).catch(err => {
+        console.log("Playback blocked until user interacts:", err);
+      });
+    } else {
+      audio.pause();
+      playBtn.innerHTML = "&#9654;"; // play icon
+    }
+  });
+
+  // Update progress + time
+  audio.addEventListener("timeupdate", () => {
+    progressBar.value = (audio.currentTime / audio.duration) * 100;
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+    totalTimeEl.textContent = formatTime(audio.duration);
+  });
+
+  progressBar.addEventListener("input", () => {
+    audio.currentTime = (progressBar.value / 100) * audio.duration;
+  });
+
+  // Volume control
+  volumeBar.addEventListener("input", () => {
+    audio.volume = volumeBar.value / 100;
+  });
+
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
+  }
+</script>
+
 
   <section id="welcome-message">
     <div class="message-content">
@@ -67,7 +144,7 @@
         <p>Dear lovely families and friends,</p>
         <p>We look forward to sharing our special day with you!</p>
         <p>We have limited our invites to the closest to us considering the venues’ limited capacity.</p>
-        <p>Please fill out the RSVP form, and kindly respond on or before September 29, 2025.</p>
+        <p>Please fill out the RSVP form, and kindly respond on or before October 3, 2025.</p>
         <p>Our website will be where you can find all things wedding-related. We hope you enjoy it as much as we enjoyed making it!</p>
         <p>Love,</p>
         <p>Nics & Racel</p>
@@ -84,10 +161,37 @@
 <!-- Image Carousel Section -->
 <section id="image-carousel">
   <div class="carousel-container">
-      <img src="image1.jpg" alt="Image 1" class="carousel-image" />
-      <img src="image2.jpg" alt="Image 2" class="carousel-image" />
+    <img src="image1.jpg" alt="Image 1" class="carousel-image" />
+    <img src="image2.jpg" alt="Image 2" class="carousel-image" />
+ 
   </div>
+
+
 </section>
+
+<script>
+  const images = document.querySelectorAll(".carousel-image");
+  let currentIndex = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.remove("active");
+    });
+    images[index].classList.add("active");
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  // Show the first image
+  showImage(currentIndex);
+
+  // Change every 4 seconds
+  setInterval(nextImage, 4000);
+</script>
+
 
 <!-- Dress Code Section -->
 <section id="dress-code">
@@ -135,49 +239,63 @@
   </div>
 </section>
 
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...etc" 
-  width="100%" 
-  height="300" 
-  style="border:0;" 
-  allowfullscreen 
-  loading="lazy">
-</iframe>
-
-<div class="venue">
+<!-- The Venue Section -->
+<section id="the-venue">
+  <h2>The Venue</h2>
+  <div class="venue-container">
+      <!-- Venue 1 -->
+     <div class="venue">
   <div class="venue-background" id="venue1-background">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=YOUR-VENUE-LINK" 
-        width="100%" 
-        height="300" 
-        style="border:0; border-radius:10px;" 
-        allowfullscreen 
-        loading="lazy">
-      </iframe>
+      <a href="https://maps.app.goo.gl/EZA5GrsVpYyGCoMH8" target="_blank" class="view-map-btn">View Map</a>
   </div>
 </div>
 
-<div class="venue">
+
+      <!-- Venue 2 -->
+      <div class="venue">
   <div class="venue-background" id="venue2-background">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=YOUR-SECOND-VENUE-LINK" 
-        width="100%" 
-        height="300" 
-        style="border:0; border-radius:10px;" 
-        allowfullscreen 
-        loading="lazy">
-      </iframe>
+      <a href="https://maps.app.goo.gl/8GNmZRiLUs8Zpfvj6" target="_blank" class="view-map-btn">View Map</a>
   </div>
 </div>
 
+</section>
 
 <!-- Image Carousel Section -->
 <section id="image-carousel">
   <div class="carousel-container">
-      <img src="image1.jpg" alt="Image 1" class="carousel-image" />
-      <img src="image2.jpg" alt="Image 2" class="carousel-image" />
+    <img src="image1.jpg" alt="Image 1" class="carousel-image" />
+    <img src="image2.jpg" alt="Image 2" class="carousel-image" />
+ 
   </div>
+
+
 </section>
+
+<script>
+  const images = document.querySelectorAll(".carousel-image");
+  let currentIndex = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.remove("active");
+    });
+    images[index].classList.add("active");
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  // Show the first image
+  showImage(currentIndex);
+
+  // Change every 4 seconds
+  setInterval(nextImage, 4000);
+</script>
+
+
+
 
 <section id="qna">
   <h2>Frequently Asked Questions</h2>
@@ -186,7 +304,7 @@
       <button class="qna-question">RSVP</button>
       <div class="qna-answer">
           <p>As much as we would love to accommodate all our friends and family, we have a limited number of guests. 
-Please understand that this event is strictly by invitation only. We have reserved seat(s) for you and would be delighted to receive your response on or before <strong>September 29, 2025.</strong> 
+Please understand that this event is strictly by invitation only. We have reserved seat(s) for you and would be delighted to receive your response on or before <strong>October 3, 2025.</strong> 
 
 Kindly note that if we don’t hear from you by then, we will assume you are unable to attend. Thank you!</p>
       </div>
@@ -263,9 +381,11 @@ Kindly note that if we don’t hear from you by then, we will assume you are una
   </div>
 
   <div class="qna-item">
-      <button class="qna-question">Can we bring our kids to the wedding?</button>
+      <button class="qna-question">Official Hashtag</button>
       <div class="qna-answer">
-          <p>This is a strict adult-only event. As much as we love your kids, the only kids invited to our wedding are those in the entourage. We hope you understand and still come and join us in our special day.</p>
+          <p>Kindly use our wedding hashtag</p>
+          </p>    </p>
+            </p>#TheNicschapterwithRacel</p>
       </div>
   </div>
 </section>
@@ -277,6 +397,32 @@ Kindly note that if we don’t hear from you by then, we will assume you are una
       <button class="view-gallery-btn">View Pre-Wedding Gallery</button>
   </a>
 </div>
+<script>
+  // Select all Q&A questions
+  const questions = document.querySelectorAll(".qna-question");
+
+  questions.forEach(question => {
+    question.addEventListener("click", () => {
+      // Close all answers first
+      questions.forEach(q => {
+        if (q !== question) {
+          q.classList.remove("active");
+          q.nextElementSibling.style.display = "none";
+        }
+      });
+
+      // Toggle the clicked one
+      const answer = question.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+        question.classList.remove("active");
+      } else {
+        answer.style.display = "block";
+        question.classList.add("active");
+      }
+    });
+  });
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
