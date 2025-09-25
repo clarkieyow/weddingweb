@@ -13,10 +13,12 @@
 
     <div class="finisher-background"></div> <!-- This div will be the animated background -->
     
-    <section class="hero">
-  <div class="hero-content">
-      <img src="Picture1.png" alt="R & N" class="couple-img">
-      <img src="NOVEMBER 2, 2025 (1).png" alt="Save the Date" class="save-the-date-img">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="Picture1.png" alt="R & N" class="couple-img" loading="lazy">
+      <img src="NOVEMBER 2, 2025 (1).png" alt="Save the Date" class="save-the-date-img" loading="lazy">
+
 
      
 
@@ -151,20 +153,20 @@
     </div>
 </section>
 
-<!-- Wedding Invitation Image Section -->
-<section id="invitation-image">
-  <img src="1.png" alt="Wedding Invitation" style="width: 100%; max-width: 1000px; margin: 40px auto; display: block;">
-  <img src="2.png" alt="Wedding Invitation Details" style="width: 100%; max-width: 1000px; margin: 40px auto; display: block;">
-</section>
+ <!-- Invitation Images -->
+  <section id="invitation-image">
+    <img src="1.png" alt="Wedding Invitation" style="width: 100%; max-width: 1000px; margin: 40px auto; display: block;" loading="lazy">
+    <img src="2.png" alt="Wedding Invitation Details" style="width: 100%; max-width: 1000px; margin: 40px auto; display: block;" loading="lazy">
+  </section>
 
 
-<!-- Image Carousel Section -->
-<section id="image-carousel">
-  <div class="carousel-container">
-    <img src="image1.jpg" alt="Image 1" class="carousel-image" />
-    <img src="image2.jpg" alt="Image 2" class="carousel-image" />
- 
-  </div>
+ <!-- Hero Carousel -->
+  <section id="hero-carousel">
+    <div class="carousel-container">
+      <img src="image/Image 1.jpg" alt="Image 1" class="hero-image" loading="lazy">
+      <img src="image/Image 2.jpg" alt="Image 2" class="hero-image" loading="lazy">
+    </div>
+  </section>
 
 
 </section>
@@ -193,42 +195,37 @@
 </script>
 
 
-<!-- Dress Code Section -->
-<section id="dress-code">
-  <h2>THE DRESS CODE</h2>
-  <div class="dress-code-content">
-      <div class="dress-code-group">
-          <h3>PRINCIPAL SPONSORS: FORMAL ATTIRE</h3>
-          <div class="dress-images">
-              <img src="principal.png" alt="Principal Sponsors Attire" class="dress-image">
-          </div>
-          <p><strong>Ninong:</strong> Barong and Black Pants</p>
-          <p><strong>Ninang:</strong> Long Gown</p>
-      </div>
-
-      <div class="dress-code-group">
-          <h3>GUESTS: SEMI – FORMAL ATTIRE</h3>
-          <div class="dress-images">
-              <img src="guest.jpg" alt="Guests Attire" class="dress-image">
-          </div>
-          <p><strong>Ladies:</strong> Long Gown / Dress</p>
-          <p><strong>Gents:</strong> Suits / Long sleeves and Trouser pants</p>
-      </div>
-
-      <div class="dress-code-group">
-          <h3>COLOR PALETTE</h3>
-          <p>You may glam up in these shades, but your smile is the best you can wear!</p>
-          <div class="color-pallete">
-            <img src="color pallete.png" alt="color-pallete" class="color-pallete">
+<!-- Dress Code -->
+  <section id="dress-code">
+    <h2>THE DRESS CODE</h2>
+    <div class="dress-code-content">
+        <div class="dress-code-group">
+            <h3>PRINCIPAL SPONSORS: FORMAL ATTIRE</h3>
+            <div class="dress-images">
+                <img src="principal.png" alt="Principal Sponsors Attire" class="dress-image" loading="lazy">
+            </div>
+            <p><strong>Ninong:</strong> Barong and Black Pants</p>
+            <p><strong>Ninang:</strong> Long Gown</p>
         </div>
-      </div>
 
-      <div class="dress-code-group">
-          <p>We kindly request that all guests honor the dress code by avoiding overly casual attire such as polo shirts, t-shirts, denim jeans, and slippers.</p>
-          <p>We look forward to seeing you in your finest that compliments our chosen theme!</p>
-      </div>
-  </div>
-</section>
+        <div class="dress-code-group">
+            <h3>GUESTS: SEMI – FORMAL ATTIRE</h3>
+            <div class="dress-images">
+                <img src="guest.jpg" alt="Guests Attire" class="dress-image" loading="lazy">
+            </div>
+            <p><strong>Ladies:</strong> Long Gown / Dress</p>
+            <p><strong>Gents:</strong> Suits / Long sleeves and Trouser pants</p>
+        </div>
+
+        <div class="dress-code-group">
+            <h3>COLOR PALETTE</h3>
+            <div class="color-pallete">
+              <img src="color pallete.png" alt="color-pallete" class="color-pallete" loading="lazy">
+            </div>
+        </div>
+    </div>
+  </section>
+
 
 <!-- Gift Guide Section -->
 <section id="gift-guide">
@@ -261,18 +258,16 @@
 </section>
 
 <!-- Image Carousel Section -->
-<section id="image-carousel">
+<section id="memory-carousel">
   <div class="carousel-container">
-    <img src="image1.jpg" alt="Image 1" class="carousel-image" />
-    <img src="image2.jpg" alt="Image 2" class="carousel-image" />
- 
+    <img src="image/Image 6.jpg" alt="Memory 1" class="memory-image" />
+    <img src="image/Image 7.jpg" alt="Memory 2" class="memory-image" />
+   
   </div>
-
-
 </section>
 
 <script>
-  const images = document.querySelectorAll(".carousel-image");
+  const image = document.querySelectorAll(".carousel-image");
   let currentIndex = 0;
 
   function showImage(index) {
@@ -293,7 +288,6 @@
   // Change every 4 seconds
   setInterval(nextImage, 4000);
 </script>
-
 
 
 
@@ -377,16 +371,10 @@ Kindly note that if we don’t hear from you by then, we will assume you are una
       <button class="qna-question">Am I allowed to take pictures and/or videos during the ceremony?</button>
       <div class="qna-answer">
           <p>We request everyone to keep the ceremony camera-free. While our I Do’s are unplugged, our reception is not and definitely as a couple who loves pictures, you’ll get tons of options to take your pictures. Feel free to take your shots and tag us along using our official wedding hashtag.</p>
+          <p><strong>#TheNICSchapterwithRACEL<strong></strong></p>
       </div>
   </div>
 
-  <div class="qna-item">
-      <button class="qna-question">Official Hashtag</button>
-      <div class="qna-answer">
-          <p>Kindly use our wedding hashtag</p>
-          </p>    </p>
-            </p>#TheNicschapterwithRacel</p>
-      </div>
   </div>
 </section>
 
@@ -439,11 +427,13 @@ Kindly note that if we don’t hear from you by then, we will assume you are una
 <section id="rsvp">
   <h2>✨ RSVP for Our Wedding</h2>
   <p>Please confirm your attendance using the form below.</p>
-  <iframe
-    src="https://form.jotform.com/252641365352051"
-    allowfullscreen>
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLScfVgHahh1RLJH1e1LCqCmmA62BE0AOPd5_lvaBeABAvoPXVw/viewform" 
+    width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0">
+      Loading…
   </iframe>
 </section>
+
 
 
 </body>
@@ -484,4 +474,41 @@ new FinisherHeader({
     "c" // Shape of particles (circle)
   ]
 });
+</script> 
+
+
+<script>
+  // Hero carousel
+  const heroImages = document.querySelectorAll(".hero-image");
+  let heroIndex = 0;
+
+  function showHeroImage(index) {
+    heroImages.forEach(img => img.classList.remove("active"));
+    heroImages[index].classList.add("active");
+  }
+
+  function nextHeroImage() {
+    heroIndex = (heroIndex + 1) % heroImages.length;
+    showHeroImage(heroIndex);
+  }
+
+  showHeroImage(heroIndex);
+  setInterval(nextHeroImage, 4000);
+
+  // Memory carousel
+  const memoryImages = document.querySelectorAll(".memory-image");
+  let memoryIndex = 0;
+
+  function showMemoryImage(index) {
+    memoryImages.forEach(img => img.classList.remove("active"));
+    memoryImages[index].classList.add("active");
+  }
+
+  function nextMemoryImage() {
+    memoryIndex = (memoryIndex + 1) % memoryImages.length;
+    showMemoryImage(memoryIndex);
+  }
+
+  showMemoryImage(memoryIndex);
+  setInterval(nextMemoryImage, 3000);
 </script>
